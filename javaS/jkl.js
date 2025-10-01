@@ -1,8 +1,9 @@
+// Select the carousel element
+var myCarousel = document.querySelector('#carouselExampleCaptions');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const carouselElement = document.querySelector('#carouselExampleCaptions');
-  const carousel = new bootstrap.Carousel(carouselElement, {
-    interval: 3000, // slide every 3 seconds
-    pause: 'hover'   // pause on hover
-  });
+// Initialize the Bootstrap carousel
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 3000,  // 3 seconds per slide
+  ride: 'carousel' // start automatically
 });
+
