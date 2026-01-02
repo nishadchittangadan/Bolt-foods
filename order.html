@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Details</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body id="order" class="container py-5">
+
+  <h2 class="mb-4">Your Order</h2>
+
+  <div id="pay" class="card p-4">
+    <h4 id="itemName"></h4>
+    <p>Price: €<span id="itemPrice"></span></p>
+
+    <!-- Quantity -->
+    <label class="form-label">Quantity</label>
+    <input type="number" id="quantity" class="form-control w-25" min="1" value="1">
+
+    <!-- Extras -->
+    <h5 class="mt-4">Extras</h5>
+    <div>
+      <input type="checkbox" value="Cheese" class="extra"> Extra Cheese (+€1)<br>
+      <input type="checkbox" value="Sauce" class="extra"> Extra Sauce (+€0.5)
+    </div>
+
+    <!-- Payment -->
+    <h5 class="mt-4">Payment Method</h5>
+    <select class="form-select w-50">
+      <option>Cash on Delivery</option>
+      <option>Card</option>
+      <option>UPI</option>
+    </select>
+
+    <button class="btn btn-success mt-4" onclick="create(); window.history.back();">Confirm Order</button>
+  </div>
+
+  
+
+  <script src="order.js"></script>
+</body>
+</html>

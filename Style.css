@@ -9,3 +9,25 @@ img.slide{
     color: yellow !important;  /* Example: change color for mobile */
   }
 }
+
+.card-img-top{
+  height: 420px;  
+  object-fit: cover;
+}
+
+body {
+  background-color: rgb(34, 45, 34);
+}
+.card-body{
+  background-color: rgb(220, 237, 224);
+}
+#footerColor{
+  background-color: rgb(199, 241, 216);
+}
+
+#order{
+  background-color: rgb(212, 200, 184);
+}
+#pay{
+  background-color: rgb(172, 198, 172);
+}

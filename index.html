@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="Style.css">
 
-    <title>Bolt Foods</title>
+    <title>ABNfoods</title>
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg bg-success fixed-top">
   <div class="container-fluid ">
-    <a class="navbar-brand text-white  fw-bold" href="#">BolT FooDs</a>
+    <a id="bolt" class="navbar-brand text-white  fw-bold" href="#">ABN <i>foods</i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,11 +39,21 @@
         <li class="nav-item">
           <a class="nav-link " href="#footer" aria-disabled="true">Location</a>
         </li>
+        <li class="nav-item">
+      
+           <a class="nav-link " href="tel:+1234567890" aria-disabled="true">Contact</a>
+
+        </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-secondary" type="submit">Search</button>
-      </form>
+      
+        <form class="d-flex" role="search">
+  <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+  <button id="searchB" class="btn btn-secondary" type="button">Search</button>
+  <div id="noResultsMsg" style="display:none; color:#b00; font-weight:600; margin-top:5px;">No results found</div>
+</form>
+
+         
+      
     </div>
   </div>
 </nav>
@@ -89,49 +100,82 @@
 
 
    <br>
-   <h1 class="text-center text-success px-2 px-md-0">
-  “Deliciousness Delivered Fast.”
+   <h1 class="heading text-center text-success px-2 px-md-0">
+  <span>“Deliciousness</span> <span>Delivered</span> <span>Fast.”</span>
 </h1>
 
     <br>
 
 
-    <div class="container" id="order">
+    <div class="container " id="order">
        <div class="row g-4">
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-            <div class="card text-center border-2 border-success h-100 w-100">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card text-center border-2 border-success h-100 w-100 " data-name="Dosa">
 
-       <img src="images/foods /Dosa.jpg" class="card-img-top img-fluid" alt="Dosa">
+       <img src="images/foods/Dosa.jpg" class="card-img-top img-fluid" alt="Dosa">
 
        <div class="card-body d-flex flex-column">
        <h5 class="card-title fw-bold">Dosa</h5>
        <p class="card-text text-secondary">Filled with spiced potato mixture: boiled potatoes, onions, mustard seeds, turmeric, green chilies, curry leaves.</p>
        <h5 class="card-price text-success">Price: 5.99 €</h5>
-      <a href="#" class="btn btn-primary">“Bring It Home”</a>
+      <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Dosa"
+           data-price="5.99">
+           Bring It Home
+      </a>
+
   </div>
 </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-             <div class="card text-center border-2 border-success h-100 w-100">
+        <div  class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+             <div class="card text-center border-2 border-success h-100 w-100" data-name="Chicken curry">
 
-  <img src="images/foods /chicken rice.jpg" class="card-img-top img-fluid" alt="Chicken rice">
-  <div class="card-body d-flex flex-column">
+  <img src="images/foods/chicken rice.jpg" class="card-img-top img-fluid" alt="Chicken rice">
+  <div  class="card-body d-flex flex-column">
     <h5 class="card-title fw-bold">Chicken Curry with Rice </h5>
     <p class="card-text text-secondary">Chicken, onions, garlic, ginger, tomatoes, yogurt, turmeric, chili, coriander, cumin, garam masala, fresh herbs.</p>
     <h5 class="card-price text-success">Price: 11.50 €</h5>
-    <a href="#" class="btn btn-primary">“Bring It Home”</a>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Chicken"
+           data-price="5.99">
+           Bring It Home
+      </a>
   </div>
 </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-             <div class="card text-center border-2 border-success h-100 w-100">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+             <div class="card text-center border-2 border-success h-100 w-100" data-name="Vegetarian">
 
-  <img src="images/foods /Sadhya.jpg" class="card-img-top img-fluid" alt="Sadhya">
+  <img src="images/foods/Sadhya.jpg" class="card-img-top img-fluid" alt="Sadhya">
   <div class="card-body d-flex flex-column">
     <h5 class="card-title fw-bold">Vegetarian Feast of Kerala</h5>
     <p class="card-text text-secondary">Rice, sambar, rasam, avial, thoran, olan, pachadi, pickles, pappadam, banana chips, curd, payasam, and seasonal vegetables.</p>
     <h5 class="card-price text-success">Price: 15.50 €</h5>
-    <a href="#" class="btn btn-primary">“Bring It Home”</a>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Kerala meals"
+           data-price="5.99">
+           Bring It Home
+      </a>
+  </div>
+</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+             <div class="card text-center border-2 border-success h-100 w-100" data-name="Vegetarian">
+
+  <img src="images/foods/paneer.jpg" class="card-img-top img-fluid" alt="Sadhya">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title fw-bold">Paneer</h5>
+    <p class="card-text text-secondary">Paneer Curry: Cubes of paneer cooked in a rich tomato-onion gravy with ginger, garlic, green chilies, turmeric, red chili.</p>
+    <h5 class="card-price text-success">Price: 12.50 €</h5>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Paneer"
+           data-price="5.99">
+           Bring It Home
+      </a>
   </div>
 </div>
         </div>
@@ -140,39 +184,71 @@
 
 
        <div class="row my-3 g-4">
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-             <div class="card text-center border-2 border-success h-100 w-100">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+             <div class="card text-center border-2 border-success h-100 w-100" data-name="Burger">
 
-  <img src="images/foods /Burger.jpg" class="card-img-top img-fluid" alt="Burger">
+  <img src="images/foods/Burger.jpg" class="card-img-top img-fluid" alt="Burger">
   <div class="card-body d-flex flex-column">
     <h5 class="card-title fw-bold">Burgers</h5>
     <p class="card-text text-secondary"> Beef patty, cheddar cheese, lettuce, tomato, onion, pickles, ketchup, mustard, toasted bun.</p>
     <h5 class="card-price text-success">Price: 6 €</h5>
-    <a href="#" class="btn btn-primary">“Bring It Home”</a>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Burger"
+           data-price="5.99">
+           Bring It Home
+      </a>
   </div>
 </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-            <div class="card text-center border-2 border-success h-100 w-100">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card text-center border-2 border-success h-100 w-100" data-name="sandwiches">
 
-  <img src="images/foods /sandwiches.jpg" class="card-img-top img-fluid" alt="sandwiches">
+  <img src="images/foods/sandwiches.jpg" class="card-img-top img-fluid" alt="sandwiches">
   <div class="card-body d-flex flex-column">
     <h5 class="card-title fw-bold">Chicken Sandwiches</h5>
     <p class="card-text text-secondary"> Grilled chicken breast, lettuce, tomato, cheddar cheese, mayo, toasted bun.</p>
     <h5 class="card-price text-success">Price: 3 €</h5>
-    <a href="#" class="btn btn-primary">“Bring It Home”</a>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Sandwiches"
+           data-price="5.99">
+           Bring It Home
+      </a>
   </div>
 </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-             <div class="card text-center border-2 border-success h-100 w-100">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+             <div class="card text-center border-2 border-success h-100 w-100" data-name="steak">
 
-  <img src="images/foods /Steak.jpg" class="card-img-top img-fluid" alt="Steak">
+  <img src="images/foods/Steak.jpg" class="card-img-top img-fluid" alt="Steak">
   <div class="card-body d-flex flex-column">
     <h5 class="card-title fw-bold">Steak</h5>
     <p class="card-text text-secondary">Ribeye beef steak, salt, black pepper, garlic, olive oil, butter, fresh herbs.</p>
     <h5 class="card-price text-success">Price: 9.99 €</h5>
-    <a href="#" class="btn btn-primary">“Bring It Home”</a>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="steak"
+           data-price="5.99">
+           Bring It Home
+      </a>
+  </div>
+</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+             <div class="card text-center border-2 border-success h-100 w-100" data-name="Mandi">
+
+  <img src="images/foods/mandi.jpg" class="card-img-top img-fluid" alt="Sadhya">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title fw-bold">Chicken Mandi</h5>
+    <p class="card-text text-secondary">Mandi: Fragrant basmati rice cooked with tender pieces of meat (chicken or lamb).</p>
+    <h5 class="card-price text-success">Price: 15 €</h5>
+    <a href="order.html"
+           class="btn btn-primary bring-home"
+           data-name="Mandi"
+           data-price="5.99">
+           Bring It Home
+      </a>
   </div>
 </div>
         </div>
@@ -180,18 +256,18 @@
     </div>
 
     <div class="container-fluid bg-light" id="footer">
-        <div class="row">
+        <div id="footerColor" class="row">
             <h1 class="text-center">Location</h1>
             <div class="col-12 col-md-6">
 
-               <h1 class="text-success">Bolt Foods</h1>
+               <h1 class="text-success">ABN <i>foods</i></h1>
                <h4>Paola</h4>
                <h4>Malta</h4>
                <p>Tel:123904</p>
                <p>Email:boltfoods@gmail.com</p>
                <p>Website:www.bolt.com</p>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 text-end">
 
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51727.46477333774!2d14.464218150526394!3d35.87433661690504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e5ad93a51d857%3A0x706e13a70c342633!2sPaola!5e0!3m2!1sen!2smt!4v1758657320388!5m2!1sen!2smt" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
